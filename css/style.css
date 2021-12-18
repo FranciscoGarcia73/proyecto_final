@@ -1,0 +1,481 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Rasa:wght@300;500&display=swap');
+ 
+/* font-family: 'Rasa', serif; */
+
+
+html {
+    
+    scroll-behavior: smooth;
+}
+:root {
+    --fuenteprincipal: 'Rasa', serif;
+    --colorprincipal: #f5f5f5;
+    --colortexto: #21242e;
+    --colortextosecundario: #d3d3d3;
+    --margingrid: 1em;
+    --fontsize: 1em;
+    --anchomaximo: 80%;
+}
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+       
+}
+.boton {
+    display: inline-block;
+    background-color: var(--colorprincipal);
+    padding: 15px 30px;
+    margin: var(--margingrid) 0;
+    color: black;
+    text-decoration: none;
+    border: 1px solid var(--colorprincipal);
+    font-weight: 300;
+}
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
+}
+
+/* inicio header */
+
+nav {
+    padding-top:20px; 
+    font-size: 150%;
+
+}
+
+nav a {
+    color: var(--colortexto);
+    text-decoration: none;
+}
+header nav .logo {
+    max-width: 100px;
+    padding: 20px;
+    float: left;
+}
+header nav .menumovil-top {
+    max-width: 100px;
+    float: right;
+    display: none;
+    max-width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    
+}
+
+header .menulogo div {
+    border-top: 2px solid var(--colortextosecundario);
+    margin-bottom: 0.625em;
+    
+}
+header nav .menu-top{
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 1em;
+    text-align: center;
+    float: right;
+            
+}
+
+header nav .menu-top li {
+    display: inline-block;
+   
+}
+
+header nav .menu-top li a, .thewaywework .menumovil li{
+    display: block;
+    width: 100%;
+    color: var(--colortexto);
+    margin-right: 1em;
+    text-align: center;
+}
+.thewaywework .menumovil li span{
+    color: var(--colortextosecundario);
+    
+}
+header .menu-top li a span{
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--colortexto);
+}
+header nav:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+}
+/*inicio main*/
+
+main .presentacion{
+    background-image: url(../images/fondo.png);
+    background-size: 100%;
+    height: 800px;
+    font-size: 400%;
+    text-align: center;
+    
+}
+main .presentacion h1{
+    padding-top: 22%;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+main .container .projects .grid{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding-bottom: 3em;
+    
+}
+.item-b{
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+
+main .container .projects h2,
+main .container .ourexpertise h2,
+main .container .pricerange h2, 
+main .container .recentnews h2,
+main .container .getintouch h2,
+main .container .team h2,
+main .container .thewaywework h2{
+    padding: 2em 0 1em 0;
+    font-size: 300%;
+
+}
+main .container .projects .grid div img, 
+main .container .recentnews figure img{
+    filter: grayscale(100%);
+
+}
+main .container .projects a,
+main .container .ourexpertise a, 
+main .container .pricerange a, 
+main .container .recentnews a,
+main .container .getintouch a{
+   text-decoration: none;
+       
+}
+main .container .projects a span,
+main .container .ourexpertise a span,
+main .container .pricerange a span, 
+main .container .recentnews a span {
+    color: var(--colortextosecundario);
+    font-weight: 300;
+    border-bottom: 1px solid var(--colortextosecundario);
+    padding-bottom: 5px;
+    font-size: 150%;
+}
+main .container .ourexpertise .grid, 
+main .container .pricerange .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    justify-content: space-between;
+    padding-bottom: 3em;
+}
+main .container .ourexpertise .grid h3{
+    padding-top: 1em;
+    font-size: 140%;
+}
+main .container .ourexpertise .grid p{
+    color:var(--colortextosecundario);
+    font-weight: 300;
+    padding: 5px 0 5px 0;
+    font-size: 130%;
+}
+main .container .pricerange .grid h3{
+    padding: 10px 0 10px 0;
+    font-size: 200%;
+    font-weight: 400;
+
+}
+main .container .pricerange .grid p{
+    padding: 10px 0 10px 0;
+    font-size: 300%;
+    font-weight: 300;
+
+}
+main .container .pricerange p sup{
+    position: relative;
+    top: -16px;
+}
+main .container .pricerange .grid article {
+    border-top: 1px solid var(--colortextosecundario);
+    font-size: 150%;
+    font-weight: 300;
+    padding-top: 1em;
+}
+main .container .pricerange .grid article ul li{
+    font-size: 110%;
+    font-weight: 300;
+    padding: 5px;
+}
+main .container .pricerange .grid article ul li span{
+    color: var(--colortextosecundario);
+}
+
+main .container .recentnews article sup{
+    position: relative;
+    top: -4px;
+}
+main .container .recentnews article h4{
+    font-size: 190%;
+    font-weight: 300;
+    padding: 5px 0 5px 0;
+}
+main .recentnews article h5{
+    color: var(--colortextosecundario);
+}
+.flex{
+    display: flex;
+      
+}
+.flex figure{
+    height: 450px;
+    padding-bottom: 3em;
+}
+.flex article:first-child{
+    padding-right: 0.5em;
+    width: calc(50% - 0.5em);
+}
+.flex article:last-child{
+    padding-left: 0.5em;
+    width: calc(50% - 0.5em);
+}
+.getintouch{
+    padding: 4em 0 2em 0;
+}
+main .container .getintouch p{
+    font-size: 150%;
+    font-weight: 300;
+    text-align: justify;
+    width: 34.00%;
+}
+main .container .getintouch a span {
+    border-bottom: 1px solid var(--colortextosecundario);
+    color: black;
+    padding-bottom: 2px;
+}
+.marco {
+    width: 200px;
+    height: 200px;
+    transform: rotate(-45deg);
+    overflow: hidden;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg) scale(1.4);
+    filter: grayscale(100%);
+}
+.foto:hover {
+    filter: grayscale(0%);
+}
+
+.marco:hover {
+    overflow: visible;    
+}
+main .container .team .grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content:space-evenly;
+    padding:  2em 0 3em 0;
+    column-gap: 2em;
+}
+main .container .team .grid article{
+    text-align: center;
+    margin: 0 auto;
+}
+
+main .container .team .grid article h4,
+main .container .team .baner h4{
+    margin-top: 1.5em;
+    padding-top: 1em;
+    font-size: 140%;
+}
+main .container .team .grid article p{
+    color:var(--colortextosecundario);
+    font-weight: 300;
+    padding: 5px 0 36px 0;
+    margin-bottom: 2em;
+    font-size: 100%;
+}
+main .container .team .baner{
+    height: 250px;
+    background-color: var(--colorprincipal);
+    text-align: center;
+   
+}
+main .container .team .baner h4{
+    padding-top: 110px;
+}
+
+.thewaywework nav .menu,
+.thewaywework nav .menumovil {
+    display: block;
+    padding-top: 20px;
+    text-align: center;
+    
+}
+.thewaywework nav .menumovil{
+    display: none;
+}
+.thewaywework nav .menu, .menumovil {
+  
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.thewaywework nav .menu li,
+.thewaywework nav .menumovil li{
+    display:inline-block;
+    width: 17%;
+    color: var(--colortextosecundario);
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.active{
+    border-bottom: 2px solid black;
+}
+.active>span{
+    color: black;
+} 
+.thewaywework p{
+    padding-top: 16px;
+    font-size: 130%;
+    text-align: justify;
+    display: none;
+}
+
+/*inicio footer*/
+footer{
+    padding: 3em 0 3em 0;
+       
+}
+footer p{
+    font-size: 80%;
+    color: var(--colortextosecundario);
+    padding-bottom: 2em;
+}
+
+
+
+@media(max-width: 600px) {
+    header nav .menu-top, .thewaywework nav .menu {
+        display: none;
+    }
+    
+    header nav .container {
+        justify-content: space-between;
+       
+    }
+    header nav .menumovil-top {
+        display: inline-block;
+        
+    }
+    .menu{
+        padding-bottom: 2em;
+    }
+    header .menu-top li a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        padding: 1.25em;
+        color: #aaa;
+        border-bottom: 1px solid #aaa;
+    }
+    header .menu-top li a span{
+        border-bottom: 0px solid transparent;
+    }
+    
+    main .container .projects, .team h2{
+        text-align: center;
+    }
+    main .presentacion h1{
+        padding-top: 400px;
+        width: 51%;
+        text-align: center;
+
+    }
+
+    main .presentacion,
+    main .container .projects h2{
+        font-size: 200%;
+    }
+    main .container .projects .grid{
+        display: block;
+                        
+    }
+    main .container .projects .grid div{
+        padding-bottom: 1em;
+    }
+    main .container .ourexpertise, 
+    main .container .pricerange, 
+    main .container .recentnews,
+    main .container .getintouch{
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+    main .container .ourexpertise .grid, 
+    main .container .pricerange .grid{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .flex{
+        display: block;
+        width: 100%;
+          
+    }
+    .flex article:first-child, .flex article:last-child{
+       width: 100%;   
+    }
+    main .container .getintouch p{
+        text-align:inherit;
+        font-size: 110%;
+        width: 100%;
+    }
+    main .container .team .grid{
+        display: block;
+        margin: 0 auto;
+        align-items: center;
+        padding:  2em 0 3em 0;
+    }
+    main .container .team .grid figure{ 
+        margin: 0 auto;
+        
+    }
+    .thewaywework nav .menumovil{
+        display: block;
+    }
+    .thewaywework nav .menumovil li{
+        width: 10%;
+    }
+    .thewaywework .centrar{
+        text-align: center;
+        font-size: 160%;
+    }
+    footer{
+        text-align: center;
+           
+    }
+   
+}
